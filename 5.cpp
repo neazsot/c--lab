@@ -1,38 +1,32 @@
 #include <iostream>
 #include <deque>
 
-// Шаблонный класс Queue
 template <typename T>
 class Queue {
 private:
     std::deque<T> elements;
 
 public:
-    // Добавление элемента в конец очереди
     void push(const T& item) {
         elements.push_back(item);
     }
 
-    // Удаление элемента из начала очереди
     void pop() {
         if (!elements.empty()) {
             elements.pop_front();
         }
     }
 
-    // Получение первого элемента очереди
     T& front() {
         return elements.front();
     }
 
-    // Проверка на пустоту
     bool empty() const {
         return elements.empty();
     }
 };
 
 int main() {
-    // Тестирование очереди для строк
     Queue<std::string> stringQueue;
     stringQueue.push("First");
     stringQueue.push("Second");
@@ -44,7 +38,6 @@ int main() {
         stringQueue.pop();
     }
 
-    // Тестирование очереди для целых чисел
     Queue<int> intQueue;
     intQueue.push(10);
     intQueue.push(20);
