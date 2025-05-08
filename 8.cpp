@@ -1,5 +1,4 @@
 
-// lab8.cpp
 #include <iostream>
 #include <string>
 
